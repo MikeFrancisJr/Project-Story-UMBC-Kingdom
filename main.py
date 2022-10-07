@@ -38,12 +38,20 @@ if(strangers == "a"):
     print("After looking long and hard through the cave, you've found it.")
     print("The Developers Sword! The blacksmith is thrilled and rewards you")
     print("with a suit of armor worthy of a hero!")
+    print("~ The End ~")
+    # If the user picks a different answer, display the unhappy ending
+  else:
+    print("You searched all over the kingdom for many years, but died of old age.")
+    print("~ The End ~")
+    
 
   
 # If the user picks answer 'B', tell the user details about the Magician story
 elif(strangers == "b"):
   print("You met with a wandering magician, who is asking you a question.")
-  print("'I have be honest with you,' the magician says. 'I'm not really that good at magic.  I will give all my magic powers if you can answer this question.")
+  print("'I have be honest with you,' the magician says. 'I'm not really that")
+  print("at magic.  I will give you all my magic powers if you can answer this")
+  print("question.")
   print("They gesture to a math problem that reads as follows:")
   print()
   print("R = (2 * 6) + 4")
@@ -52,8 +60,20 @@ elif(strangers == "b"):
   mathProblem = ((2 * 6) + 4)
   # Tell the user to enter a solution to the math problem and store as a variable called 'mathSolution'
   mathSolution = input("Please enter a solution to the math problem: ")
+  print()
   # Convert the math solution into an integer
   mathSolution = int(mathSolution)
+  # If the answer is correct, display message telling user they received magic powers
+  if(mathProblem == mathSolution):
+    print("'Wow! You're really good at math!,' the magician says. 'You will be")
+    print("a great magician one day. Please accept my magic powers.")
+    print("~ The End ~")
+    
+  # If the answer is wrong, display message telling user they would be a horrible magician
+  else:
+    print("'I had high hopes for you,' the magician says. 'But you wouldn't be")
+    print("a good magician like I thought.")
+    print("~ The End ~")
   
 # If the user picks answer 'C', tell the user details about princess Nadia
 elif(strangers == "c"):
@@ -65,16 +85,28 @@ elif(strangers == "c"):
   print("But in a twist, the dragon ask you to solve a riddle in exchange for")
   print("the right to marry the princess and be the future King of UMBC.")
   print()
-  print("'How many letters are in princess Nadia's name?'")
+  print("'Approximately how many people live in the Kingdom of UMBC?'")
   print()
-  print("You ponder for a moment. Attempting to spell princess Nadia's name")
-  print("in your head and count the letters.")
+  print("You ponder for a moment. Attempting to count all the people you saw")
+  print("in your head.")
   print("After pondering for a moment you give the dragon an answer. . .")
   print()
-  # Ask the user to enter a number and store as a variable called 'namelength'
-  namelength = input("Enter the number of letters: ")
-  #Convert namelength into an integer
-  namelength = int(namelength)
+  # Ask the user to enter a number and store as a variable called 'population'
+  population = input("Enter the number of people: ")
+  print()
+  #Convert population into an integer
+  population = int(population)
+  # If the population is between 2000 and 3000, display honorable message
+  if(population > 3000):
+    print("You are an honorable knight who pays attention to his surroundings.")
+    print("Princess Nadia will be happy to call you her husband and King!")
+    print("~ The End ~")
+  # If population isn't, then display deadly ending message
+  else:
+    print("A man like you could never be King and doesn't deserve")
+    print("princess Nadia,' the dragon says. Sadly, the dragon eats you alive.")
+    print("~ The End ~")
+    
   
 # 
 
